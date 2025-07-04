@@ -26,14 +26,14 @@ import CHIRPS_PREPROCESSING
 import os
 
 
-MERGED_FILE_PATH = "Dataset/chirps_data/chirps_nepal_merged.nc"
+# MERGED_FILE_PATH = "Dataset/chirps_data/chirps_nepal_merged.nc"
 
-# 1. Download dataset if not present
-if not os.path.exists(MERGED_FILE_PATH):
-    print("Merged dataset not found, downloading data...")
-    CHIRPS_PREPROCESSING.download_chirps()
-else:
-    print("Merged dataset found, skipping download.")
+# # 1. Download dataset if not present
+# if not os.path.exists(MERGED_FILE_PATH):
+#     print("Merged dataset not found, downloading data...")
+#     CHIRPS_PREPROCESSING.download_chirps()
+# else:
+#     print("Merged dataset found, skipping download.")
 
 
 # Load data with caching
