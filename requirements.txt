@@ -3,7 +3,7 @@ climate_indices==1.0.12
 dash==3.0.4  # Upgraded for Python 3.10
 dash_bootstrap_components==2.0.3  # Matching Dash 3.x
 geopandas==1.0.1
-numpy==2.0.0
+numpy==1.26.4 
 pandas==2.2.0
 plotly==6.0.1
 pymannkendall==1.4.3
