@@ -1,10 +1,12 @@
 FROM python:3.9-slim
 
-# Install system dependencies first (required for geopandas)
+# Install system dependencies for spatial packages
 RUN apt-get update && \
     apt-get install -y \
     libspatialindex-dev \
     libgeos-dev \
+    libproj-dev \
+    libgdal-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
