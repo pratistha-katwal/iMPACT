@@ -1,4 +1,4 @@
-FROM python:3.10-slim  # Changed base image
+FROM python:3.10-slim
 
 # Install system dependencies with cleanup
 RUN apt-get update && \
@@ -12,7 +12,7 @@ RUN apt-get update && \
 
 WORKDIR /app
 
-# Install Python dependencies in two stages for better caching
+# Install Python dependencies with dependency cache optimization
 COPY requirements.txt .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
@@ -25,5 +25,5 @@ ENV PYTHONUNBUFFERED=1
 ENV PORT=8080
 EXPOSE $PORT
 
-# Start command with optimized Gunicorn settings
+# Optimized Gunicorn configuration
 CMD exec gunicorn --bind :$PORT --workers 1 --threads 4 --timeout 120 app:server
