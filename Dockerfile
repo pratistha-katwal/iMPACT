@@ -1,6 +1,6 @@
 FROM python:3.9-slim
 
-# Install system dependencies for spatial packages
+# Install system dependencies
 RUN apt-get update && \
     apt-get install -y \
     libspatialindex-dev \
