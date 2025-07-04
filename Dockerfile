@@ -15,8 +15,8 @@ COPY . .
 ENV PYTHONUNBUFFERED=1
 ENV PORT=8080
 
-# Expose the port the app runs on
+# Expose the port
 EXPOSE $PORT
 
 # Command to run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:$PORT", "app_dash:app.server"]
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:server
