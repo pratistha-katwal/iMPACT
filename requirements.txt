@@ -1,0 +1,14 @@
+climate_indices==1.0.12
+dash==3.0.4
+dash_bootstrap_components==2.0.3
+geopandas==1.0.1
+numpy==2.2.6
+pandas==2.3.0
+plotly==6.0.1
+pymannkendall==1.4.3
+Requests==2.32.4
+rioxarray==0.19.0
+Shapely==2.1.1
+xarray==2025.4.0
+netCDF4>=1.6.0
+h5netcdf>=1.0.0
