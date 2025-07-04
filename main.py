@@ -2094,10 +2094,7 @@ def update_drought_analysis(spi_type, year, month):
             annotations=[dict(text=str(e), showarrow=False)]
         )
 
+# In your main application file (app.py or similar)
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8050))
-    app.run_server(
-        host='0.0.0.0',
-        port=port,
-        debug=False
-    )
+    port = int(os.environ.get("PORT", 8080))
+    app.run(host='0.0.0.0', port=port)
