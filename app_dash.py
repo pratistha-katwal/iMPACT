@@ -2094,4 +2094,11 @@ def update_drought_analysis(spi_type, year, month):
             annotations=[dict(text=str(e), showarrow=False)]
         )
 if __name__ == '__main__':
-    app.run_server(host="0.0.0.0", port=8050)
+    import os
+    # Use Render's PORT environment variable if available, otherwise default to 8050
+    port = int(os.environ.get("PORT", 8050))
+    app.run_server(
+        host='0.0.0.0',
+        port=port,
+        debug=False  # Set to False in production
+    )
